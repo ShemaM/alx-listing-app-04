@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "ignoreDeprecations": "6.0",
     "types": ["node", "react", "react-dom"],
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -19,7 +18,7 @@
     "incremental": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@/*": ["/*"]
+      "@/*": ["./*"]
     }
   },
   "include": [
@@ -32,4 +31,3 @@
   ],
   "exclude": ["node_modules"]
 }
-

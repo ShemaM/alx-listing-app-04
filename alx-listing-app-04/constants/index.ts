@@ -2,7 +2,7 @@
 // Hero background image
 export const HERO_BACKGROUND = "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80";
 
-export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
+const propertyData: Omit<PropertyProps, 'id'>[] = [
   {
     name: "Villa Ocean Breeze",
     address: {
@@ -364,3 +364,8 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
     discount: ""
   }
 ];
+
+export const PROPERTYLISTINGSAMPLE: PropertyProps[] = propertyData.map((property, index) => ({
+  id: (index + 1).toString(),
+  ...property,
+}));
