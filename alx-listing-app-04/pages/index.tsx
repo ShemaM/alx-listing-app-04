@@ -4,7 +4,7 @@ import PropertyCard from "@/components/properties/PropertyCard";
 import { PropertyProps } from "@/interfaces";
 
 export default function Home() {
-  const [properties, setProperties] = useState<PropertyProps[]>([]);
+  const [properties, setProperties] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -27,8 +27,8 @@ export default function Home() {
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {properties.map((property) => (
+    <div className="grid grid-cols-3 gap-4">
+      {properties.map((property: PropertyProps) => (
         <PropertyCard key={property.id} property={property} />
       ))}
     </div>
