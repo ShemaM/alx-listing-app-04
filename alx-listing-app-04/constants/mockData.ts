@@ -9,7 +9,7 @@ export const mockProperties: PropertyProps[] = [
     category: ['Apartment', 'Modern'],
     price: 150,
     offers: { bed: '1', shower: '1', occupants: '2' },
-    image: 'https://via.placeholder.com/300',
+    image: '/images/property-placeholder.svg',
     discount: '10% off for a week stay'
   },
   {
@@ -20,7 +20,7 @@ export const mockProperties: PropertyProps[] = [
     category: ['Cottage', 'Nature'],
     price: 120,
     offers: { bed: '2', shower: '1', occupants: '4' },
-    image: 'https://via.placeholder.com/300',
+    image: '/images/property-placeholder.svg',
     discount: ''
   },
   {
@@ -31,8 +31,7 @@ export const mockProperties: PropertyProps[] = [
     category: ['Villa', 'Luxury'],
     price: 500,
     offers: { bed: '4', shower: '3', occupants: '8' },
-    image: 'https://via.placeholder.com/300',
+    image: '/images/property-placeholder.svg',
     discount: '15% off for a month stay'
   }
 ];
-

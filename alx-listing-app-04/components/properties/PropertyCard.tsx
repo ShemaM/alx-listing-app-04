@@ -8,7 +8,7 @@ interface PropertyCardComponentProps {
 
 const PropertyCard: React.FC<PropertyCardComponentProps> = ({ property }) => {
   return (
-    <div className="border rounded-lg shadow-md overflow-hidden">
+    <div className="border rounded-lg shadow-md bg-white overflow-hidden transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg">
       <Image src={property.image} alt={property.name} width={400} height={192} className="w-full h-48 object-cover" />
       <div className="p-4">
         <h3 className="text-xl font-semibold">{property.name}</h3>
