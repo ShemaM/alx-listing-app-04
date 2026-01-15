@@ -1,6 +1,13 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { ReviewProps } from "@/interfaces";
+
+interface ReviewProps {
+  id: string;
+  propertyId: string;
+  comment: string;
+  rating: number;
+  user: string;
+}
 
 interface ReviewSectionProps {
   propertyId: string;
