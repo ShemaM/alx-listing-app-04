@@ -33,10 +33,22 @@ export default function Home() {
   }
 
   return (
-    <div className="grid grid-cols-3 gap-4">
-      {properties.map((property) => (
-        <PropertyCard key={property.id} property={property} />
-      ))}
-    </div>
+    <section className="container mx-auto px-6 py-10 space-y-6">
+      <div className="text-center space-y-2">
+        <p className="text-sm font-semibold uppercase tracking-wide text-blue-600">
+          Handpicked stays
+        </p>
+        <h1 className="text-3xl md:text-4xl font-bold">Find your next escape</h1>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Browse a curated selection of luxury apartments, villas, and cottages tailored for comfort and style.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {properties.map((property) => (
+          <PropertyCard key={property.id} property={property} />
+        ))}
+      </div>
+    </section>
   );
 }
