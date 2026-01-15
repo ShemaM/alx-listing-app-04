@@ -1,4 +1,4 @@
-import { PropertyProps } from "@/interfaces";
+import { PropertyProps, ReviewProps } from "@/interfaces";
 
 export const mockProperties: PropertyProps[] = [
   {
@@ -35,3 +35,49 @@ export const mockProperties: PropertyProps[] = [
     discount: '15% off for a month stay'
   }
 ];
+
+export const mockReviews: ReviewProps[] = [
+  {
+    id: 'r1',
+    propertyId: '1',
+    comment: 'Great place, very clean and modern!',
+    rating: 5,
+    user: 'Alice'
+  },
+  {
+    id: 'r2',
+    propertyId: '1',
+    comment: 'Good location, but a bit noisy at night.',
+    rating: 3,
+    user: 'Bob'
+  },
+  {
+    id: 'r3',
+    propertyId: '2',
+    comment: 'Absolutely loved the cottage! So peaceful.',
+    rating: 5,
+    user: 'Charlie'
+  },
+  {
+    id: 'r4',
+    propertyId: '2',
+    comment: 'Beautiful surroundings, but the bed was a bit uncomfortable.',
+    rating: 4,
+    user: 'David'
+  },
+  {
+    id: 'r5',
+    propertyId: '3',
+    comment: 'Amazing villa, worth every penny!',
+    rating: 5,
+    user: 'Eve'
+  },
+  {
+    id: 'r6',
+    propertyId: '3',
+    comment: 'Fantastic pool, but the service could be better.',
+    rating: 4,
+    user: 'Frank'
+  }
+];
+

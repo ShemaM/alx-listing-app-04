@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { PropertyProps } from '../../interfaces';
 
 interface PropertyCardComponentProps {
@@ -8,7 +9,7 @@ interface PropertyCardComponentProps {
 const PropertyCard: React.FC<PropertyCardComponentProps> = ({ property }) => {
   return (
     <div className="border rounded-lg shadow-md overflow-hidden">
-      <img src={property.image} alt={property.name} className="w-full h-48 object-cover" />
+      <Image src={property.image} alt={property.name} width={400} height={192} className="w-full h-48 object-cover" />
       <div className="p-4">
         <h3 className="text-xl font-semibold">{property.name}</h3>
         <p className="text-gray-600">{property.address.city}, {property.address.country}</p>
@@ -18,8 +19,8 @@ const PropertyCard: React.FC<PropertyCardComponentProps> = ({ property }) => {
             <span className="ml-1 text-gray-700">{property.rating}</span>
         </div>
         <div className="flex flex-wrap gap-1 mt-2">
-            {property.category.map((cat, index) => (
-                <span key={index} className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
+            {property.category.map((cat) => (
+                <span key={cat} className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
                     {cat}
                 </span>
             ))}
