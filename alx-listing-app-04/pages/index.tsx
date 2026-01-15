@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import PropertyCard from "@/components/properties/PropertyCard";
-import { PropertyProps } from "@/interfaces";
+import PropertyCard from "@/components/property/PropertyCard"; // Assume this component exists
 
 export default function Home() {
   const [properties, setProperties] = useState([]);
@@ -28,7 +27,7 @@ export default function Home() {
 
   return (
     <div className="grid grid-cols-3 gap-4">
-      {properties.map((property: PropertyProps) => (
+      {properties.map((property) => (
         <PropertyCard key={property.id} property={property} />
       ))}
     </div>
